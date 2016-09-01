@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>文档</title>
+	<link rel="stylesheet" href="2048.css">
+	<script src="2048.js"></script>
+ </head>
+ <body>
+	<p>
+		Score:<span id="score"></span>
+		Top：<span id="topScore"></span>
+	</p>
+	<div id="gridPanel">
+	<!--背景格-->
+		
+	<!--前景格-->
+		
+	</div>
+	<div class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<h3 class="title">设置你想要的行和列</h3>
+				<form id="login-form">
+					<label for="#row">行:</label><input id="row" name="row" value="4"/>
+					<label for="#col">列:</label><input id="col" name="col" value="4"/>
+					<input type="button" value="PLAY"/>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="gameOver">
+		<div><!-- 背景div --></div>
+		<p><!--  前景提示框-->
+			Game Over！<br>
+			Score:<span id="finalScore"></span><br>
+			<a class="button" onclick="game.start()">
+			Try again!</a>
+		</p>
+	</div>
+ </body>
+</html>

@@ -9,5 +9,8 @@ some demoes
 
 网上学习的璀璨星空图（感谢那位教学的大神）：http://1.xstyle.applinzi.com/
 
-当时求职时候的一个个人主页，简单的用bootstrap搭建：http://6.xstyle.applinzi.com/
+学习时用bootstrap搭建的简单的个人主页：http://6.xstyle.applinzi.com/
 
+以上内容全部发布在新浪云服务器上，由于canvas统计部分需要数据库支持，未发布。
+
+以上内容可通过 http://xstyle.applinzi.com/   统一访问

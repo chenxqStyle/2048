@@ -256,7 +256,7 @@ enemy3Imgs[7].src = "img/enemy3_down6.png";
 function Enemy1(imgs){
   this.life = 1;         //1条命，被撞击一次即坠毁
   this.crashed = false;  //是否开始坠毁
-  this.index = 0
+  this.index = 0;
   this.width = 57;
   this.height = 51;
   this.x = Math.random()*(WIDTH-this.width);

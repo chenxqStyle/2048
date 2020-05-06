@@ -1,0 +1,384 @@
+/*公共样式*/
+
+/*浮动清理*/
+‍.clearfix:after{
+    ‍‍content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/*报名成功*/
+    /*头部*/
+    .head{
+        background: #F4F4F4;
+        height: 50px;
+        border-bottom:1px solid #A4A4A4;
+    }
+    .head>img{
+        width: 10px;
+        height: 17px;
+        position: relative;
+        left:15px;
+        top:13px;
+    }
+    .head>h4{
+        text-align: center;
+        margin-top:-5px;
+    }
+    .baoming{
+        width: 100%;
+    }
+    .xingshi{
+        margin:5px 15% 0 15%;
+    }
+    .xingshi>img{
+        width: 100%;
+    }
+    .xingshi1{
+        margin: 0 auto;
+        width: 70%;
+        border: 1px dashed #4BB2E2;
+        border-radius: 10px;
+    }
+    .xingshi1>img{
+        width: 100%;
+        padding: 5px;
+    }
+    .yuyue{
+        margin: 20px 20px 0 20px;
+        border-top: 1px solid #ECECEC;
+        border-left: 1px solid #ECECEC;
+    }
+    .yuyue>tbody>tr>td{
+        border-right: 1px solid #ECECEC;
+        /*border-bottom:1px solid red;*//*上下少1px*/
+        text-align: center;
+        color: #9A9A9A;
+        line-height: 30px;
+    }
+    .yuyue1{
+        margin: 20px;
+        margin-top: 0;
+        border-top: 1px solid #ECECEC;
+        border-left: 1px solid #ECECEC;
+    }
+    .yuyue1>tbody>tr>td{
+        border-right: 1px solid #ECECEC;
+        border-bottom: 1px solid #ECECEC;
+        text-align: center;
+        color: #9A9A9A;
+        line-height: 20px;
+    }
+    /*按钮*/
+    .fanhui{
+        text-align: center;
+    }
+    .yaoqing{
+        text-align: center;
+    }
+    .fanhui>button{
+        color:#fff;
+        background: #FB4E02;
+        border-radius: 5px;
+        border: none;
+        width:80%;
+        line-height: 34px;
+    }
+    .fanhui>button:focus{
+        outline: none;
+    }
+    .yaoqing>button{
+        color:#fff;
+        background: #FBD13D;
+        border-radius: 5px;
+        border: none;
+        width:80%;
+        line-height: 34px;
+    }
+    .yaoqing>button:focus{
+        outline: none;
+    }
+    /*电话*/
+    .tel{
+        text-align: center;
+        margin: 20px 0 20px 0;
+    }
+    .tel>div>p{
+        margin-bottom: 0;
+    }
+    .tel>div>h4{
+        font-weight: bold;
+    }
+
+/*报名失败*/
+    .shibai{
+        margin-top: 80px;
+    }
+    .shibai>div>div{
+        text-align: center;
+    }
+    .shibai>div>div>img{
+        width: 60%;
+    }
+
+    /*重新支付*/
+    .chongxin{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom:50px;
+    }
+    .chongxin>button{
+        color:#fff;
+        background: #00ADEE;
+        border-radius: 5px;
+        border: none;
+        width:80%;
+        line-height: 40px;
+    }
+    .chongxin>button:focus{
+        outline: none;
+    }
+
+/*微信分享页*/
+    .share>img{
+        width: 100%;
+    }
+    .head>h5{
+        text-align: center;
+        font-size: 18px;
+        margin-top: -13px;
+    }
+    .head>p{
+        display: inline-block;
+        position: relative;
+        left:15px;
+        top:16px;
+    }
+    .share1{
+        margin-bottom: 50px;
+    }
+    .share1>p{
+        margin:0 20px 0 20px;
+    }
+/*微信报名*/
+    .baoming1{
+        width: 100%;
+        position: relative;
+    }
+    .baoming1>button{
+        width: 80%;
+        background: #F68B01;
+        color: #fff;
+        border: 2px solid #FCDF76;
+        border-radius: 10px;
+        line-height: 40px;
+        position: absolute;
+        left: 10%;
+        top: 89%;
+    }
+    .baoming1>button:focus{
+        outline: none;
+    }
+    .baoming1>p{
+        width: 70%;
+        position: absolute;
+        margin: 5px auto;
+        left: 15%;
+        top: 94%;
+        text-align: center;
+    }
+    .baoming1>p>span{
+        color: #F66901;
+    }
+    .share2{
+        margin-top: 10px;
+    }
+/*报名页*/
+    /*1*/
+    .bm{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 60px;
+        background: #fff;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .bm1>h4{
+        padding-top: 20px;
+        font-size: 16px;
+        text-align: left;
+    }
+    .bm1>h4>span{
+        padding: 3px 10px;
+        background: #00A3E8;
+        color: #fff;
+        border-radius: 0 50px 50px 0;
+        margin-right: 5px;
+    }
+    .bm1>img{
+        width: 80%;
+        margin: 0 auto;
+        height:180px;
+        border-radius: 8px;
+    }
+    .bm1>input{
+        width: 80%;
+        margin: 0 auto;
+        height: 180px;
+        position: relative;
+        top: -180px;
+        /*border: 1px solid red;*/
+        margin-bottom: -180px;
+        opacity: 0;
+    }
+    .bm1>p{
+        margin-top:10px;
+    }
+    /*2*/
+    .bm2{
+        border-top: 1px dashed #FBCB20;
+    }
+    .bm2>h4{
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    .bm2>form>select{
+        width: 43%;
+        border: 1px solid #DCDCDC;
+        border-radius: 5px;
+        padding: 5px;
+        /*清除右边小三角*/
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari 和 Chrome */
+        background: url("../img/xiala.png")no-repeat 90% center transparent;
+        /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+        padding-right: 32px;
+    }
+    /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+    .bm2>form>select::-ms-expand { display: none; }
+    .bm2>form>img{
+        width: 15px;
+        position: absolute;
+        left: 37%;
+        top: 78%;
+    }
+    .bm2>form>.bm3{
+        width: 15px;
+        position: absolute;
+        left: 86%;
+    }
+    .bm2>form>select:focus{
+        outline: none;
+    }
+    .bm2>form>.repair{
+        margin-left: 20px;
+    }
+    /*地址*/
+    .bm2>p{
+        text-align: left;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    /*时间*/
+    .bm3{
+        border-top: 1px dashed #FBCB20;
+        padding-bottom: 15px;
+    }
+    .bm3>h4{
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    .bm3{
+        width: 100%;
+    }
+    .bm3>div>input{
+        width: 43%;
+        border: 1px solid #DCDCDC;
+        border-radius: 5px;
+        padding: 5px;
+        background: url("../img/xiala.png")no-repeat 90% center transparent;
+        /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+        padding-right: 35px;
+        color:#000000;
+    }
+    .bm3>div>input:focus{
+        outline: none;
+    }
+    /*input placehoder颜色*/
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: #000;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #000;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #000;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #000;
+    }
+    .bm3>div>select{
+        width: 43%;
+        border: 1px solid #DCDCDC;
+        border-radius: 5px;
+        padding: 5px;
+        /*清除右边小三角*/
+        appearance:none;
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari 和 Chrome */
+        background: url("../img/xiala.png")no-repeat 90% center transparent;
+        /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+        padding-right: 45px;
+    }
+    .bm3>div>select:focus{
+        outline: none;
+    }
+    .bm3>div>.repair{
+        margin-left: 20px;
+    }
+    /*底部支付*/
+    .bm0{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background: #fff;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .bm0>.pay{
+        float: left;
+        width: 45%;
+        text-align: left;
+        margin-top: 5px;
+    }
+    .bm0>.pay>p{
+        margin: 10px;
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .bm0>.pay>p>b{
+        color: #08A5E8;
+    }
+    .bm0>.pay>p>.payc{
+        color: #F5BF00;
+    }
+    .bm0>.pay1{
+        float: right;
+        width: 55%;
+    }
+    .bm0>.pay1>button{
+        width: 90%;
+        color: #fff;
+        background: #00A3E8;
+        border: none;
+        border-radius: 5px;
+        margin: 30px auto;
+        line-height: 40px;
+        margin-top: 27px;
+    }
+    .bm0>.pay1>button:focus{
+        outline: none;
+    }

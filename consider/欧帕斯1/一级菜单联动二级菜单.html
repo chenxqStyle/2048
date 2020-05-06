@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE> New Document </TITLE>
+    <meta charset="UTF-8">
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="">
+    <META NAME="Keywords" CONTENT="">
+    <META NAME="Description" CONTENT="">
+    <script language="JavaScript" type="text/javascript">
+        //定义了修理厂的二维数组，里面的顺序跟城市的顺序是相同的。通过selectedIndex获得城市的下标值来得到相应的修理厂数组
+        var repair=[
+            ["北京","天津","上海","重庆"],
+            ["南京","苏州","南通","常州"],
+            ["福州","福安","龙岩","南平"],
+            ["广州","潮阳","潮州","澄海"],
+            ["兰州","白银","定西","敦煌"]
+        ];
+
+        function getRepair(){
+            //获得城市下拉框的对象
+            var sltCity=document.form1.city;
+            //获得修理厂下拉框的对象
+            var sltRepair=document.form1.repair;
+            //得到对应城市的城市数组
+            var cityRepair=repair[sltCity.selectedIndex - 1];
+
+            //清空修理厂下拉框，仅留提示选项
+            sltRepair.length=1;
+
+            //将修理厂数组中的值填充到修理厂下拉框中
+            for(var i=0;i<cityRepair.length;i++){
+                sltRepair[i+1]=new Option(cityRepair[i],cityRepair[i]);
+            }
+        }
+    </script>
+</HEAD>
+
+<BODY>
+<FORM METHOD=POST ACTION="" name="form1">
+    <SELECT NAME="city" onChange="getRepair()">
+        <OPTION VALUE="0">请选择所在城市</OPTION>
+        <OPTION VALUE="直辖市">直辖市 </OPTION>
+        <OPTION VALUE="江苏省">江苏省 </OPTION>
+        <OPTION VALUE="福建省">福建省 </OPTION>
+        <OPTION VALUE="广东省">广东省 </OPTION>
+        <OPTION VALUE="甘肃省">甘肃省 </OPTION>
+    </SELECT>
+    <SELECT NAME="repair">
+        <OPTION VALUE="0">请选择所在修理厂</OPTION>
+    </SELECT>
+</FORM>
+</BODY>
+</HTML>

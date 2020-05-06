@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>报名页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/lyz.calendar.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/lyz.calendar.min.js"></script>
+
+    <style>
+        /*日历td样式*/
+        th,td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="font-family:Microsoft YaHei;background: #FBCE2D">
+<!--头部-->
+<div class="navbar-fixed-top head">
+    <img src="img/14@3x.png" alt="">
+    <h4>清凉一夏</h4>
+</div>
+
+<!--主体内容-->
+<div class="bm">
+    <div class="bm1 img-avatar">
+        <h4><span>1</span>车辆信息(为您定制专属车型车膜)</h4>
+        <!--<img src="img/bm.png" id="myPic" alt="">
+        <input type="file" id="file" name="file" class="btn btn-sm btn-normal" onchange="showPicture(this.value)">-->
+        <img src="img/bm.png" id="img_recz">
+        <input type="file" accept="image/*" name="logo" id="file">
+        <p>点击上传行驶证正页照</p>
+    </div>
+    <div class="bm1 bm2">
+        <h4><span>2</span>预约地点</h4>
+        <form method="post" action="" name="form1">
+            <select name="city" onChange="getRepair()">
+                <option value="0">选择城市</option>
+                <option value="南京">南京</option>
+                <option value="苏州">苏州</option>
+                <option value="南通">南通</option>
+                <option value="无锡">无锡</option>
+                <option value="常州">常州</option>
+            </select>
+            <select name="repair" class="repair">
+                <option value="0">选择修理厂</option>
+            </select>
+        </form>
+        <p>浦口区旭日华庭圣荷西园区门面14栋102103丽岛路火炬南路十字路口</p>
+    </div>
+    <div class="bm1 bm2 bm3">
+        <h4><span>3</span>预约时间</h4>
+        <div>
+            <input id="txtBeginDate" type="text" placeholder="请选择日期">
+            <select class="repair">
+                <option value="选择时间">选择时间</option>
+                <option value="9：00">9:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<!--底部内容-->
+<div class="bm0 clearfix">
+    <div class="pay">
+        <p>实付：<b>&yen;399</b></p>
+        <p>优惠：<b class="payc">&yen;3281</b></p>
+    </div>
+    <div class="pay1">
+        <button>立即支付</button>
+    </div>
+</div>
+
+<!--弹层组件-->
+<script type="text/javascript" src="js/layer.m/layer.m.js"></script>
+<script src="dist/lrz.bundle.js"></script>
+<script>
+    //日历调用
+    $(function () {
+        $("#txtBeginDate").calendar({
+            controlId: "divDate",                                 // 弹出的日期控件ID，默认: $(this).attr("id") + "Calendar"
+            speed: 200,                                           // 三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000),默认：200
+            complement: true,                                     // 是否显示日期或年空白处的前后月的补充,默认：true
+            readonly: true,                                       // 目标对象是否设为只读，默认：true
+            /*upperLimit: new Date(),*/                               // 日期上限，默认：NaN(不限制)
+            /*lowerLimit: new Date("2011/01/01"), */               // 日期下限，默认：NaN(不限制)
+            /*callback: function () {                               // 点击选择日期后的回调函数
+             alert("您选择的日期是：" + $("#txtBeginDate").val());   //弹出选择的时间值
+             }*/
+        });
+        /*$("#txtEndDate").calendar();*/    //不注释的话会报错，调用了没用赋值
+    });
+</script>
+<script language="JavaScript" type="text/javascript">
+    //定义了修理厂的二维数组，里面的顺序跟城市的顺序是相同的。通过selectedIndex获得城市的下标值来得到相应的修理厂数组
+    var repair=[
+        ["鼓楼区好时代维修厂","江宁区苏修快捷连锁","秦淮区彰武快修","玄武区维斯汽修"],
+        ["南京","苏州","南通","常州"],
+        ["福州","福安","龙岩","南平"],
+        ["广州","潮阳","潮州","澄海"],
+        ["兰州","白银","定西","敦煌"]
+    ];
+
+    function getRepair(){
+        //获得城市下拉框的对象
+        var sltCity=document.form1.city;
+        //获得修理厂下拉框的对象
+        var sltRepair=document.form1.repair;
+        //得到对应城市的城市数组
+        var cityRepair=repair[sltCity.selectedIndex - 1];
+
+        //清空修理厂下拉框，仅留提示选项
+        sltRepair.length=1;
+
+        //将修理厂数组中的值填充到修理厂下拉框中
+        for(var i=0;i<cityRepair.length;i++){
+            sltRepair[i+1]=new Option(cityRepair[i],cityRepair[i]);
+        }
+    }
+</script>
+<!--<script>
+    /*图片上传*/
+    function showPicture(value){
+        var docObj=document.getElementById("file");
+
+        var imgObjPreview=document.getElementById("myPic");
+        if(docObj.files &&docObj.files[0])
+        {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '80%';
+            imgObjPreview.style.height = 'auto';
+            //imgObjPreview.src = docObj.files[0].getAsDataURL();
+
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        }
+        else
+        {
+            //IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById("localImag");
+            //必须设置初始大小
+            localImagId.style.width = "80%";
+            localImagId.style.height = "auto";
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+</script>
+-->
+<script>
+    $(function(){
+
+        $("#img_recz").click(function(){
+            $('input[name=logo]').trigger("click");
+        });
+
+        $('input[name=logo]').on('change', function(){
+            lrz(this.files[0])
+                    .then(function (rst) {
+                        $.ajax({
+                            url: 'upload.php',
+                            type: 'post',
+                            data: {img: rst.base64},
+                            dataType: 'json',
+                            timeout: 200000,
+                            success: function (response) {
+                                if (response.ecd == '0') {
+                                    alert_msg('上传成功！');
+                                    $("#img_recz").attr("src",response.result)
+                                    return true;
+                                } else {
+                                    return alert_msg(response.msg);
+                                }
+                            },
+
+                            error: function (jqXHR, textStatus, errorThrown) {
+
+                                if (textStatus == 'timeout') {
+                                    alert_msg('请求超时');
+
+                                    return false;
+                                }
+
+                                alert_msg(jqXHR.responseText);
+                            }
+                        });
+
+                    })
+                    .catch(function (err) {
+
+                    })
+                    .always(function () {
+
+                    });
+        });
+    })
+
+    function alert_msg(d){
+        layer.open({
+            content: d,
+            time: 2
+        });
+    };
+
+    function memberinfo(){
+
+        var identity_up_url = $('#img_recz').attr('src');
+
+        if(identity_up_url.indexof('lice.png' != -1)){
+            alert_msg("上传行驶证正页照");
+            return false;
+        }
+
+        $.ajax({
+            url:'https://www.baidu.coom',
+            type:'post',
+            data:{'identity_up_url':identity_up_url},
+            async : true, //默认为true 异步
+            error:function(){
+                alert_msg('提交失败，请重试！');
+                return false;
+            },
+            success:function(msg){
+                if(msg == 1){
+                    //  window.location.href = "https://www.baidu.coom";
+                    //alert_msg("提交成功");
+                    $(".state").show();
+                }else{
+                    alert_msg("提交失败，请重试！");
+                }
+            }
+        });
+
+
+    }
+</script>
+</body>
+</html>
